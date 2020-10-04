@@ -49,7 +49,7 @@ body {
 }
 
 .project_image {
-    width: 400px;
+    width: 300px;
     height: 280px;
     min-width: 300px;
     margin: 20px 10px 20px 10px;
@@ -85,6 +85,72 @@ body {
     align-items: center;
     justify-content: center;
     margin: 20 0px;
+}
+
+.project_ocean_name {
+    background-image: url(pic13.jpg);
+    background-position: center;
+    width: 1050px;
+    height: 500px;
+}
+
+.head_21 {
+    color:#e21b15;
+    font-size: 30px;
+    text-indent: 500px;
+    padding-top: -100px;
+ }
+
+.head_22 {
+    color:#e21b15;
+    font-size: 30px;
+    text-indent: 950px;
+    padding-top: 100px;
+ }
+
+.head_23 {
+    color:#e21b15;
+    font-size: 30px;
+    text-indent: 600px;
+    padding-top: -100px;
+ }
+
+.head_24 {
+    color:#e21b15;
+    font-size: 30px;
+    text-indent: 250px;
+    padding-top: -100px;
+ }
+
+.head_3 {
+    color:#e9d30e;
+    font-size: 30px;
+}
+
+.project_button3 {
+    font-size: large;
+    background-color: #077186;
+    font-style: oblique;
+    margin-top: -100px;
+ }
+
+.all_oceans {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: lawngreen;
+}
+
+.all_sea {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: lawngreen;
+}
+
+.project_button4 {
+    font-size: large;
+    background-color: #077186;
+    font-style: oblique;
+    margin-top: -100px;
 }
 
 @media (max-width:710px){

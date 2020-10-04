@@ -3,6 +3,7 @@ console.log("hi");
 let button;
 let button2;
 let button3;
+let button4;
 let picchange1 = ["pic5.jpg", "pic6.jpg", "pic1.jpg"];
 let picchange2 = ["pic8.jpg", "pic9.jpg", "pic2.jpg"];
 let picchange3 = ["pic11.jpg", "pic12.jpg", "pic3.jpg"];
@@ -10,7 +11,9 @@ let textchange = ["Mysterious Undersea World", "An ocean is a body of water that
 let num1 = 0;
 let num2 = 0;
 let i = 0;
-let ispeed = 1;
+let j = 0;
+
+
 button = document.getElementById('button');
 
 button.addEventListener("click", changepic);
@@ -37,21 +40,22 @@ window.addEventListener('load', function(){
     .then(Response => Response.json())
     .then(data => {
         console.log(data);
-        let nameelement = document.getElementById('ocean_name');
+
+        let str = ["ocean_name1","ocean_name2","ocean_name3","ocean_name4"];
         button3 = document.getElementById('button3');
-        
         button3.addEventListener("click", function(){
-            if(i<5 && i>=0){
-                nameelement.innerHTML = data.oceans[i].name;
-            } else {
-                ispeed *= -1;
-                i += (ispeed * 2); 
-                nameelement.innerHTML = data.oceans[i].name;
+            for (j=0; j<4; j++) {
+                document.getElementById(str[j]).innerHTML=''
             }
-            i += ispeed; 
-
-        });      
+            document.getElementById(str[i]).innerHTML = data.oceans[i].name;
+            i = (i+1)%4;
+        });  
+        
+        button4 = document.getElementById('button4');
+        button4.addEventListener("click", function() {
+            let a = Math.floor(Math.random() * data.seas.length);
+            console.log(data.seas[a].name);
+            document.getElementById('sea_name').innerHTML = data.seas[a].name;
+        });
     })
-
-    
 })

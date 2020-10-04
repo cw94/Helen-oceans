@@ -3,19 +3,16 @@
     "source": "http://en.wikipedia.org/wiki/List_of_seas",
     "oceans": [
       {
-          "name": "Pacific"
+          "name": "Arctic"
       },
       {
           "name": "Atlantic"
       },
       {
+          "name": "Pacific"
+      },
+      {
           "name": "Indian"
-      },
-      {
-          "name": "Southern"
-      },
-      {
-          "name": "Arctic"
       }
     ],
     "seas": [
