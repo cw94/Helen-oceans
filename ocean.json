@@ -4,22 +4,22 @@
     "oceans": [
       {
           "name": "Arctic",
-          "size": "12257000 m2",
+          "size": "12257000 km2",
           "avagdeep": "1300 m"
       },
       {
           "name": "Atlantic",
-          "size": "94314000 m2",
+          "size": "94314000 km2",
           "avagdeep": "3626 m"
       },
       {
           "name": "Pacific",
-          "size": "181344000 m2",
+          "size": "181344000 km2",
           "avagdeep": "3957 m"
       },
       {
           "name": "Indian",
-          "size": "74118000 m2",
+          "size": "74118000 km2",
           "avagdeep": "3397 m"
       }
     ],

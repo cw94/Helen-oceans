@@ -85,15 +85,15 @@ let y3speed = 2;
 
 let oceanData;
 let a;
-let namepositionX = [85, 85, 330, 330];
+let namepositionX = [60, 60, 270, 270];
 let namepositionY = [125, 335, 125, 335];
-let sizepositionX = [85, 85, 330, 330];
+let sizepositionX = [60, 60, 270, 270];
 let sizepositionY = [150, 360, 150, 360];
-let deeppositionX = [85, 85, 330, 330];
+let deeppositionX = [60, 60, 270, 270];
 let deeppositionY = [175, 385, 175, 385];
 
 function setup() {
-    createCanvas(600, 500);
+    createCanvas(480, 500);
 }
 
 function draw() {
@@ -129,8 +129,8 @@ function draw() {
 
     //print 4 oceans details in the p5js
     if(oceanData){
-        textSize(30); 
-        textFont("华文彩云");
+        textSize(25); 
+        textFont("Comic Sans MS");
         for(a=0; a<4; a++){
            text(oceanData.oceans[a].name, namepositionX[a], namepositionY[a]);
            text(oceanData.oceans[a].size, sizepositionX[a], sizepositionY[a]);
