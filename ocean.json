@@ -3,16 +3,24 @@
     "source": "http://en.wikipedia.org/wiki/List_of_seas",
     "oceans": [
       {
-          "name": "Arctic"
+          "name": "Arctic",
+          "size": "12257000 m2",
+          "avagdeep": "1300 m"
       },
       {
-          "name": "Atlantic"
+          "name": "Atlantic",
+          "size": "94314000 m2",
+          "avagdeep": "3626 m"
       },
       {
-          "name": "Pacific"
+          "name": "Pacific",
+          "size": "181344000 m2",
+          "avagdeep": "3957 m"
       },
       {
-          "name": "Indian"
+          "name": "Indian",
+          "size": "74118000 m2",
+          "avagdeep": "3397 m"
       }
     ],
     "seas": [

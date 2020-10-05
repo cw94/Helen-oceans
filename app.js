@@ -1,5 +1,3 @@
-console.log("hi");
-
 let button;
 let button2;
 let button3;
@@ -25,6 +23,7 @@ function changepic(){
     num1 = (num1+1)%3;
 }
 
+
 button2 = document.getElementById('button2');
 
 button2.addEventListener("click", changeword);
@@ -33,6 +32,7 @@ function changeword(){
     document.getElementById('keyword').innerText = textchange[num2];
     num2 = (num2+1)%3;
 }
+
 
 window.addEventListener('load', function(){
     console.log('page is loaded');
@@ -57,5 +57,88 @@ window.addEventListener('load', function(){
             console.log(data.seas[a].name);
             document.getElementById('sea_name').innerHTML = data.seas[a].name;
         });
+
+        oceanData = data;
     })
 })
+
+//---------------------P5.JS----------------------------------------
+let x = 100;
+let y = 50;
+let x1 = 0;
+let y1 = 200;
+let x2 = 50;
+let y2 = 150;
+let x3 = 100;
+let y3 = 250;
+
+let xspeed = 2;
+let yspeed = 1;
+let x1speed = 2;
+let y1speed = 2;
+let x2speed = 3;
+let y2speed = 2;
+let x3speed = 4;
+let y3speed = 2;
+
+let oceanData;
+let a;
+let namepositionX = [85, 85, 330, 330];
+let namepositionY = [125, 335, 125, 335];
+let sizepositionX = [85, 85, 330, 330];
+let sizepositionY = [150, 360, 150, 360];
+let deeppositionX = [85, 85, 330, 330];
+let deeppositionY = [175, 385, 175, 385];
+
+function setup() {
+    createCanvas(600, 500);
+}
+
+function draw() {
+    background(0, 200, 250);
+
+    xspeed = bounce(x, width, 0, xspeed);
+    yspeed = bounce(y, height, 0, yspeed);
+    x1speed = bounce(x1, width, 0, x1speed);
+    y1speed = bounce(y1, height, 0, y1speed);
+    x2speed = bounce(x2, width, 0, x2speed);
+    y2speed = bounce(y2, height, 0, y2speed);
+    x3speed = bounce(x3, width, 0, x3speed);
+    y3speed = bounce(y3, height, 0, y3speed);
+  
+    x += xspeed;
+    y += yspeed;
+    x1 += x1speed;
+    y1 += y1speed;
+    x2 += x2speed;
+    y2 += y2speed;
+    x3 += x3speed;
+    y3 += y3speed;
+  
+    noStroke();
+    fill(50, 200, 100);
+    ellipse(x, y, 50, 50);
+    fill(200, 200, 100);
+    ellipse(x1, y1, 50, 50);
+    fill(0, 0, 255);
+    ellipse(x2, y2, 50, 50);
+    fill(250, 255, 200);
+    ellipse(x3, y3, 50, 50);
+
+    if(oceanData){
+        textSize(30); 
+        textFont("华文彩云");
+        for(a=0; a<4; a++){
+           text(oceanData.oceans[a].name, namepositionX[a], namepositionY[a]);
+           text(oceanData.oceans[a].size, sizepositionX[a], sizepositionY[a]);
+           text(oceanData.oceans[a].avagdeep, deeppositionX[a], deeppositionY[a]);
+        }
+    }
+}  
+
+function bounce(a, top, bottom, speed) {
+    if(a > top || a < bottom){
+      speed *= -1; 
+    }
+    return speed;
+}
