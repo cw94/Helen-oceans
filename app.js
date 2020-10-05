@@ -11,7 +11,7 @@ let num2 = 0;
 let i = 0;
 let j = 0;
 
-
+//press "More Views" button, you will see 3 pictures change
 button = document.getElementById('button');
 
 button.addEventListener("click", changepic);
@@ -23,7 +23,7 @@ function changepic(){
     num1 = (num1+1)%3;
 }
 
-
+//press "Deep Show" button, you will see differen instruction of Oceans 
 button2 = document.getElementById('button2');
 
 button2.addEventListener("click", changeword);
@@ -33,7 +33,7 @@ function changeword(){
     num2 = (num2+1)%3;
 }
 
-
+//connect to ocean.json file
 window.addEventListener('load', function(){
     console.log('page is loaded');
     fetch("ocean.json")
@@ -41,6 +41,7 @@ window.addEventListener('load', function(){
     .then(data => {
         console.log(data);
 
+//show 4 biggest oceans from the world wide map
         let str = ["ocean_name1","ocean_name2","ocean_name3","ocean_name4"];
         button3 = document.getElementById('button3');
         button3.addEventListener("click", function(){
@@ -50,7 +51,8 @@ window.addEventListener('load', function(){
             document.getElementById(str[i]).innerHTML = data.oceans[i].name;
             i = (i+1)%4;
         });  
-        
+
+//show 141 seas in the world ramdomly
         button4 = document.getElementById('button4');
         button4.addEventListener("click", function() {
             let a = Math.floor(Math.random() * data.seas.length);
@@ -62,7 +64,7 @@ window.addEventListener('load', function(){
     })
 })
 
-//---------------------P5.JS----------------------------------------
+//---------------------P5.JS  show  name,size and average deep of 4 biggest oceans----------------------------
 let x = 100;
 let y = 50;
 let x1 = 0;
@@ -96,7 +98,7 @@ function setup() {
 
 function draw() {
     background(0, 200, 250);
-
+    //4 bubbles move ramdonly
     xspeed = bounce(x, width, 0, xspeed);
     yspeed = bounce(y, height, 0, yspeed);
     x1speed = bounce(x1, width, 0, x1speed);
@@ -125,6 +127,7 @@ function draw() {
     fill(250, 255, 200);
     ellipse(x3, y3, 50, 50);
 
+    //print 4 oceans details in the p5js
     if(oceanData){
         textSize(30); 
         textFont("华文彩云");
@@ -136,6 +139,7 @@ function draw() {
     }
 }  
 
+//bubbles change direction when meet boundary
 function bounce(a, top, bottom, speed) {
     if(a > top || a < bottom){
       speed *= -1; 
